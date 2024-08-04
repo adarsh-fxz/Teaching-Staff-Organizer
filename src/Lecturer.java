@@ -11,8 +11,18 @@ public class Lecturer extends Teacher {
         this.department = department;
     }
 
-    public void gradeAssignment(double gradedScore2) {
-        this.gradedScore = gradedScore2;
+    public char gradeAssignment(double gradedScore) {
+        if (gradedScore >= 70) {
+            return 'A';
+        } else if (gradedScore >= 60) {
+            return 'B';
+        } else if (gradedScore >= 50) {
+            return 'C';
+        } else if (gradedScore >= 40) {
+            return 'D';
+        } else {
+            return 'E';
+        }
     }
 
     public String getGradedScore() {
@@ -29,9 +39,7 @@ public class Lecturer extends Teacher {
     }
 
     public String toString() {
-        return "Teacher ID: " + getTeacherId() + ", Teacher Name: " + getTeacherName() + ", Address: " + getAddress()
-                + ", Working Type: " + getWorkingType() + ", Employment Status: " + getEmploymentStatus()
-                + ", Graded Score: " + gradedScore + ", Years of Experience: " + yearsOfExperience + ", Department: "
-                + department;
+        return super.toString() + ", Graded Score: " + gradedScore + ", Years of Experience: " + yearsOfExperience
+                + ", Department: " + department;
     }
 }

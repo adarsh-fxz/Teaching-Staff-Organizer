@@ -22,9 +22,7 @@ public class Tutor extends Teacher {
     }
 
     public String toString() {
-        return "Teacher ID: " + getTeacherId() + ", Teacher Name: " + getTeacherName() + ", Address: " + getAddress()
-                + ", Working Type: " + getWorkingType() + ", Employment Status: " + getEmploymentStatus()
-                + ", Working Hours: " + workingHours + ", Salary: " + Salary + ", Specialization: " + specialization
-                + ", Academic Qualifications: " + academicQualifications + ", Performance Index: " + performanceIndex;
+        return super.toString() + ", Working Hours: " + workingHours + ", Salary: " + Salary + ", Specialization: " + specialization
+        + ", Academic Qualifications: " + academicQualifications + ", Performance Index: " + performanceIndex;
     }
 }

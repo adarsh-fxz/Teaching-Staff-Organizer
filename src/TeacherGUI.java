@@ -295,8 +295,8 @@ public class TeacherGUI {
                             teacherFound = true;
                             if (teacher instanceof Lecturer) {
                                 Lecturer lecturer = (Lecturer) teacher;
-                                lecturer.gradeAssignment(gradedScore);
-                                JOptionPane.showMessageDialog(frame, "Graded score updated successfully");
+                                char grade = lecturer.gradeAssignment(gradedScore);
+                                JOptionPane.showMessageDialog(frame, "Assignment graded. Grade: " + grade);
                             } else {
                                 JOptionPane.showMessageDialog(frame, "Teacher is not a lecturer");
                             }
